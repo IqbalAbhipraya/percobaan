@@ -31,6 +31,10 @@ const userRoutes = require('./src/routes/user.routes');
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
 
+app.get("/", (req, res) => {
+  res.send("🚀 API is running on Railway");
+});
+
 // jalanin server
 app.listen(port, () => {
     console.log(`Server berjalan di http://localhost:${port}`);
