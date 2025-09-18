@@ -4,7 +4,7 @@
   "description": "\"# backend-finpro_eisd\"",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
