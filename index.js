@@ -5,6 +5,7 @@ const express = require('express');
 // buat instance aplikasi express
 const app = express();
 // database
+const swaggerDocs = require('./src/swagger');
 const db = require('./src/models');
 // port antara dari env atau 3000
 const port = process.env.PORT || 3000;
@@ -12,6 +13,8 @@ const port = process.env.PORT || 3000;
 // parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+swaggerDocs(app, port);
 
 async function testDbConnection() {
     try {
